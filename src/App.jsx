@@ -42,11 +42,11 @@ const App = () => {
       ]
     },
     {
-      path: "/devoneriksen/login", // Full path to the login page
+      path: "login", // Full path to the login page
       element: <Login />,
     },
     {
-      path: "/devoneriksen/admin-setup", // Full path to the admin-setup page
+      path: "admin-setup", // Full path to the admin-setup page
       element: <AdminControl/>,
       children: [
         { index: true, element: <ShowEmails /> },
