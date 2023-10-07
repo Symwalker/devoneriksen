@@ -3,26 +3,15 @@ import React from 'react'
 import { Route, Routes, useRoutes } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
-import Navbar from './components/navbar/Navbar';
-import ReadSamplee from './pages/readSample';
 import Layout from './pages/Layout';
 import Novels from './pages/Novels';
 import OrbitalSpace from './pages/OrbitalSpace';
-import Footer from './components/Footer/footer';
-import { Box } from '@mui/material';
-import bg from "./images/bg.jpg"
 import TheftofFire from './pages/TheftofFire';
 import Contact from './pages/Contact';
-import NewsEmail from './components/Newsletter/newsEmail';
 import Events from './pages/Events';
 import Media from './pages/media';
-import AdminControl from './pages/Admin';
-import Login from './pages/Login';
-import ShowEmails from './components/AdminComp/showEmail';
-import ShowContactinfo from './components/AdminComp/Contactinfo';
-import AddArticles from './components/AdminComp/addArticles';
+
 import WritersThought from './pages/WritersThought';
-import Error from './pages/Error';
 
 const App = () => {
   let routes = [
@@ -39,19 +28,6 @@ const App = () => {
         { path: "events", element: <Events /> },
         { path: "media", element: <Media /> },
         { path: "writing", element: <WritersThought /> },
-        {
-          path: "login", // Full path to the login page
-          element: <Login />,
-        },
-        {
-          path: "admin-setup", // Full path to the admin-setup page
-          element: <AdminControl/>,
-          children: [
-            { index: true, element: <ShowEmails /> },
-            { path: "showcontacts", element: <ShowContactinfo /> },
-            { path: "addwritingarticles", element: <AddArticles /> },
-          ]
-        }
       ]
     }
     
