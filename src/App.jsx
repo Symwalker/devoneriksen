@@ -57,10 +57,10 @@ let routes = [
 
         ]
       },
-      {
-        path: "*",
-        element: <Error/>,
-      },
+      // {
+      //   path: "*",
+      //   element: <Error/>,
+      // },
 ];
 
 const element = useRoutes(routes)
