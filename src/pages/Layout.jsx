@@ -8,28 +8,25 @@ import NewsEmail from '../components/Newsletter/newsEmail'
 const Layout = () => {
 
   return (
-    <>
-      <Outlet />
-    </>
 
+    <Box
+      sx={{
+        backgroundSize: 'contain',
+        position: "relative",
+        // maxHeight: '2000px',
+        backgroundRepeat: 'repeat',
+        // height: '2000px',
+        backgroundImage: `url(${bg})`,
+        // Add a background color for debugging if the image is not visible
+        // backgroundColor: 'red',
+      }}
+    >
+      <Navbar />
+      <Outlet />
+      <NewsEmail />
+      <Footer />
+    </Box>
   )
 }
 
 export default Layout
-// <Box
-//     sx={{
-//         backgroundSize: 'contain',
-//         position:"relative",
-//         // maxHeight: '2000px',
-//         backgroundRepeat: 'repeat',
-//         // height: '2000px',
-//         backgroundImage: `url(${bg})`,
-//         // Add a background color for debugging if the image is not visible
-//         // backgroundColor: 'red',
-//     }}
-// >
-{/* <Navbar /> */ }
-
-{/* <NewsEmail/> */ }
-{/* <Footer /> */ }
-// </Box>
