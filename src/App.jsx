@@ -112,12 +112,13 @@ const App = () => {
 
   const adminRoutes = (
     <Routes>
+      <Route path="/" element={<Layout />}>
       <Route path="/admin-setup" element={<AdminControl />} />
       <Route path="/admin-setup/showemails" element={<ShowEmails />} />
       <Route path="/admin-setup/showcontacts" element={<ShowContactinfo />} />
       <Route path="/admin-setup/addwritingarticles" element={<AddArticles />} />
       <Route path="/admin-setup/login" element={<Login />} />
-
+      </Route>
     </Routes>   
   );
 
