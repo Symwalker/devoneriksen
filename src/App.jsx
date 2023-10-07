@@ -27,7 +27,7 @@ import Error from './pages/Error';
 const App = () => {
   let routes = [
     {
-      path: "/devoneriksen", // The base path
+      path: "/", // The base path
       element: <Layout />,
       children: [
         { index: true, element: <Home /> },
