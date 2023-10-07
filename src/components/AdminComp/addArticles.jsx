@@ -84,7 +84,7 @@ const AddArticles = () => {
 
   return (
     <>
-    {/* <AdminNavbar/> */}
+    <AdminNavbar/>
     <div className="mx-auto mt-10 max-w-4xl p-3">
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-2">

@@ -10,7 +10,7 @@ const AdminControl = () => {
             <AdminNavbar />
             <Outlet />
           </>
-        ) : <Navigate to="/login" />
+        ) : <Navigate to="/admin-setup/login" />
       )
 }
 

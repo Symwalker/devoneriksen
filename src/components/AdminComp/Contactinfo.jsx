@@ -64,6 +64,8 @@ useEffect(()=>{
 
 
   return (
+    <>
+    <AdminNavbar/>
     <TableContainer component={Paper} sx={{marginTop:5 ,width:{md:"70%", xs:"90%"},marginLeft:"auto", marginRight:"auto"}}>
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
         <TableHead>
@@ -86,5 +88,6 @@ useEffect(()=>{
         </TableBody>
       </Table>
     </TableContainer>
+    </>
   );
 }

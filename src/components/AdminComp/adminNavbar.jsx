@@ -59,10 +59,12 @@ const AdminNavbar = () => {
   const handleClose = () => {
     setAnchorEl(null)
   }
+  const navigate = useNavigate()
   const { pathname } = useLocation()
   const logout = ()=>{
-    localStorage.clear();
+    localStorage.removeItem('token')
     window.location.reload();
+    navigate('/admin-setup/login')
   }
   // const active = location.pathname 
   // console.log(location.pathname);
@@ -116,8 +118,8 @@ const AdminNavbar = () => {
                 {/* </Link> */}
 
 
-                <Link to='/admin-setup'>
-                  <Button lassName={`${pathname === "/admin-setup/showcontacts" ? "activeClass" : "noActiveClass"} font-style`} sx={{color: "#FFFFFF" ,fontSize: "18px", fontFamily: "Poppins", fontWeight: 300 }}>Emails</Button>
+                <Link to='/admin-setup/showemails'>
+                  <Button lassName={`${pathname === "/admin-setup/showemails" ? "activeClass" : "noActiveClass"} font-style`} sx={{color: "#FFFFFF" ,fontSize: "18px", fontFamily: "Poppins", fontWeight: 300 }}>Emails</Button>
                 </Link>
                 
                 <Link to='/admin-setup/addwritingarticles'>
@@ -141,7 +143,7 @@ const AdminNavbar = () => {
               <Grid item lg={5.5} md={9.5}>
                 <Stack direction='row' justifyContent={{md:"center"}} width={"100%"} alignItems={"center"} spacing={3} paddingLeft={{md:21, lg:0}}>
 
-                  <Link to='/admin-setup'>
+                  <Link to='/admin-setup/showemails'>
                     <Button className={`${pathname === "/" ? "activeClass" : "noActiveClass"} font-style`} sx={{ fontSize: "18px", fontFamily: "Poppins", fontWeight: 300 }}>Emails</Button>
                   </Link>
                
