@@ -44,11 +44,11 @@ let routes = [
         ]
     },
     {
-        path: "/login",
+        path: "/devoneriksen/login",
         element: <Login />,
       },
       {
-        path:"/admin-setup",
+        path:"/devoneriksen/admin-setup",
         element:<AdminControl/>,
         children:[
           { index: true, element: <ShowEmails /> },
