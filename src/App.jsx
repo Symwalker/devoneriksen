@@ -25,43 +25,37 @@ import WritersThought from './pages/WritersThought';
 import Error from './pages/Error';
 
 const App = () => {
-let routes = [
+  let routes = [
     {
-        path: "/devoneriksen",
-        element: <Layout />,
-        children: [
-            { index: true, element: <Home /> },
-            { path: "/about", element: <About /> },
-            { path: "/novels", element: <Novels /> },
-            { path: "/theft-of-fire", element: <TheftofFire /> },
-            // TODO:when it will become dynamic the route will <NovelDetailed/> then through props it will work
-            { path: "/orbital-space", element: <OrbitalSpace /> },
-            // { path: "/read", element: <ReadSamplee /> },
-            { path: "/contact", element: <Contact /> },
-            { path: "/events", element: <Events /> },
-            { path: "/media", element: <Media /> },
-            { path:"/writing", element:<WritersThought />}
-        ]
+      path: "/devoneriksen", // The base path
+      element: <Layout />,
+      children: [
+        { index: true, element: <Home /> },
+        { path: "about", element: <About /> }, // Notice that the leading slash is removed
+        { path: "novels", element: <Novels /> },
+        { path: "theft-of-fire", element: <TheftofFire /> },
+        { path: "orbital-space", element: <OrbitalSpace /> },
+        { path: "contact", element: <Contact /> },
+        { path: "events", element: <Events /> },
+        { path: "media", element: <Media /> },
+        { path: "writing", element: <WritersThought /> }
+      ]
     },
     {
-        path: "/login/login",
-        element: <Login />,
-      },
-      {
-        path:"admin-setup",
-        element:<AdminControl/>,
-        children:[
-          { index: true, element: <ShowEmails /> },
-          { path: "showcontacts", element: <ShowContactinfo /> },
-          { path: "addwritingarticles", element: <AddArticles /> },
-
-        ]
-      },
-      // {
-      //   path: "*",
-      //   element: <Error/>,
-      // },
-];
+      path: "/devoneriksen/login", // Full path to the login page
+      element: <Login />,
+    },
+    {
+      path: "/devoneriksen/admin-setup", // Full path to the admin-setup page
+      element: <AdminControl/>,
+      children: [
+        { index: true, element: <ShowEmails /> },
+        { path: "showcontacts", element: <ShowContactinfo /> },
+        { path: "addwritingarticles", element: <AddArticles /> },
+      ]
+    }
+  ];
+  
 
 const element = useRoutes(routes)
 return (
