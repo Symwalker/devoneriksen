@@ -12,6 +12,14 @@ import Events from './pages/Events';
 import Media from './pages/media';
 
 import WritersThought from './pages/WritersThought';
+import WritingAll from './pages/WritingAll';
+import Fictionwrting from './pages/Fictionwrting';
+import CatInvader from './pages/CatInvader';
+import ShortStories from './pages/ShortStories';
+import SwordLessons from './pages/SwordLessons';
+import EggWizard from './pages/EggWizard';
+import Beatles from './pages/Beatles';
+import AdoptedVampire from './pages/AdoptedVampire';
 
 const App = () => {
   let routes = [
@@ -27,29 +35,28 @@ const App = () => {
         { path: "contact", element: <Contact /> },
         { path: "events", element: <Events /> },
         { path: "media", element: <Media /> },
-        { path: "writing", element: <WritersThought /> },
+        { path: "writingarticles", element: <WritersThought /> },
+        { path: "writing", element: <WritingAll /> },
+        {path: "writingfiction",element: <Fictionwrting />},
+        {path: "short-stories",element: <ShortStories />},
+        {path: "writingfiction/cat-invader",element: <CatInvader />},
+        {path: "writingfiction/sword-lessons",element: <SwordLessons />},
+        {path: "writingfiction/egg-wizard",element: <EggWizard />},
+        {path: "writingfiction/beatles",element: <Beatles />},
+        {path: "writingfiction/adopted-vampire",element: <AdoptedVampire />},
       ]
     }
-    
   ];
-  
 
-const element = useRoutes(routes)
-return (
+
+  const element = useRoutes(routes)
+  return (
     <>
- 
-        {/* <Navbar /> */}
-
-
-        {element}
-        
-   
-
-   
+      {element}
     </>
-)
+  )
 
-    }
+}
 export default App
 
 
@@ -95,7 +102,7 @@ export default App
 //       <Route path="/admin-setup/addwritingarticles" element={<AddArticles />} />
 //       <Route path="/admin-setup/login" element={<Login />} />
 //       </Route>
-//     </Routes>   
+//     </Routes>
 //   );
 
 //   const mainRoutes = (
@@ -125,7 +132,7 @@ export default App
 //         }}
 //       >
 //         {!isAdminRoute && <Navbar />}
-//         {isAdminRoute ? adminRoutes : mainRoutes}        
+//         {isAdminRoute ? adminRoutes : mainRoutes}
 //         {!isAdminRoute && <NewsEmail />}
 //         {!isAdminRoute && <Footer />}
 //       </Box>

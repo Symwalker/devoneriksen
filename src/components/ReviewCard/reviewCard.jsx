@@ -7,7 +7,7 @@ const ReviewCard = () => {
     <div data-aos="fade-up"
     data-aos-duration="1000">
       <section class="section-testi">
-        <Box sx={{width:"87%", marginX:"auto"}}>
+        <Box sx={{width:{xs:"97%", sm:"87%"}, marginX:"auto"}}>
         
             <div class={`section-test-in`}>
                 <BiSolidQuoteLeft className='absolute top-4' size={40} color='#ff9b02'/>

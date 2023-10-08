@@ -1,6 +1,16 @@
 section.section-testi{
     padding: 100px 0;
+
 }
+@media (max-width: 700px) {
+   
+    .section-test-in{
+        padding: 42px 32px !important;
+    }
+
+  }
+
+
 
 .section-test-in{
     border: 2px solid #fff;

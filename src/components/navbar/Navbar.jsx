@@ -117,23 +117,7 @@ const Navbar = () => {
                 <Link to='/'>
                   <Button lassName={`${pathname === "/" ? "activeClass" : "noActiveClass"} font-style`} sx={{ color: "#FFFFFF", fontSize: "18px", fontFamily: "Poppins", fontWeight: 300 }}>Home</Button>
                 </Link>
-                
-                <Link to='/events'>
-                  <Button className={`${pathname === "/events" ? "activeClass" : "noActiveClass"} font-style`} sx={{ color: "#FFFFFF", fontSize: "18px", fontFamily: "Poppins", fontWeight: 300 }}>Events</Button>
-                </Link>
-                <Link to='/media'>
-                  <Button className={`${pathname === "/media" ? "activeClass" : "noActiveClass"} font-style`} sx={{ color: "#FFFFFF", fontSize: "18px", fontFamily: "Poppins", fontWeight: 300 }}>Media</Button>
-                </Link>
-                <Link to='/about'>
-                  <Button className={`${pathname === "/about" ? "activeClass" : "noActiveClass"} font-style`} sx={{ color: "#FFFFFF", fontSize: "18px", fontFamily: "Poppins", fontWeight: 300 }}>About</Button>
-                </Link>
-                <Link to='/writing'>
-                  <Button className={`${pathname === "/writing" ? "activeClass" : "noActiveClass"}`} sx={{ color: "#FFFFFF", fontSize: "18px", fontWeight: 300 }}>Writing</Button>
-                </Link>
-                <Link to='/contact'>
-                  <Button className={`${pathname === "/contact" ? "activeClass" : "noActiveClass"}`} sx={{ color: "#FFFFFF", fontSize: "18px", fontFamily: "Poppins", fontWeight: 300 }}>Contact Us</Button>
-                </Link>
-                <Link to={"/novels"}></Link>
+                <Link to={"/novels"}>
                 <Box sx={{ color: "#FFFFFF", fontSize: "18px", fontFamily: "Poppins", fontWeight: 300, px:1.2  }} >
                   <div className="antialiased">
                   <div className="group">
@@ -172,6 +156,24 @@ const Navbar = () => {
                     </ul>
                   </div>
                 </div></Box>
+                </Link>
+                <Link to='/writing'>
+                  <Button className={`${pathname === "/writing" ? "activeClass" : "noActiveClass"}`} sx={{ color: "#FFFFFF", fontSize: "18px", fontWeight: 300 }}>Writing</Button>
+                </Link>
+                <Link to='/events'>
+                  <Button className={`${pathname === "/events" ? "activeClass" : "noActiveClass"} font-style`} sx={{ color: "#FFFFFF", fontSize: "18px", fontFamily: "Poppins", fontWeight: 300 }}>Events</Button>
+                </Link>
+                <Link to='/media'>
+                  <Button className={`${pathname === "/media" ? "activeClass" : "noActiveClass"} font-style`} sx={{ color: "#FFFFFF", fontSize: "18px", fontFamily: "Poppins", fontWeight: 300 }}>Media</Button>
+                </Link>
+                <Link to='/about'>
+                  <Button className={`${pathname === "/about" ? "activeClass" : "noActiveClass"} font-style`} sx={{ color: "#FFFFFF", fontSize: "18px", fontFamily: "Poppins", fontWeight: 300 }}>About</Button>
+                </Link>
+               
+                <Link to='/contact'>
+                  <Button className={`${pathname === "/contact" ? "activeClass" : "noActiveClass"}`} sx={{ color: "#FFFFFF", fontSize: "18px", fontFamily: "Poppins", fontWeight: 300 }}>Contact</Button>
+                </Link>
+                
               </Stack>
             </Drawer>
 
@@ -230,6 +232,48 @@ const Navbar = () => {
                       </div>
                     </div></Box>
                   </Link>
+                  <Link to='/writing'>
+                    <Box sx={{ color: "#FFFFFF", fontSize: "18px", fontFamily: "Poppins", fontWeight: 300 }}><div className="antialiased">
+                      <div className="group">
+                        <div
+                          className={`${pathname === "/writing" ? "activeClass" : "noActiveClass"} font-style  dropdown rounded inline-flex items-center`}
+                        >
+                          <span className="mr-1 ">WRITING</span>
+                          <BsChevronDown />
+                        </div>
+                        <ul className="absolute z-10 hidden text-gray-700 pt-1 group-hover:block">
+                          <li className="">
+                            <Link
+                              to={"/writingarticles"}
+                              className="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+
+                            >
+                              Articles
+                            </Link>
+                          </li>
+                          <li className="">
+                            <Link to={"/writingfiction"}
+                              className="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                              href="#"
+                            >
+                              Fiction
+                            </Link>
+                          </li>
+                          {/* <li className="">
+                              <a
+                                className="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                                href="#"
+                              >
+                                Three
+                              </a>
+                            </li> */}
+                        </ul>
+                      </div>
+                    </div></Box>
+                  </Link>
+                  {/* <Link to='/writing'>
+                  <Button className={`${pathname === "/writing" ? "activeClass" : "noActiveClass"} font-style`} sx={{ color: "#FFFFFF", fontSize: "18px", fontFamily: "Poppins", fontWeight: 300 }}>Writing</Button>
+                  </Link> */}
                   <Link to='/events'>
                     <Button className={`${pathname === "/events" ? "activeClass" : "noActiveClass"} font-style`} sx={{ color: "#FFFFFF", fontSize: "18px", fontFamily: "Poppins", fontWeight: 300 }}>Events</Button>
                   </Link>
@@ -240,9 +284,7 @@ const Navbar = () => {
                     <Button className={`${pathname === "/about" ? "activeClass" : "noActiveClass"} font-style`} sx={{ color: "#FFFFFF", fontSize: "18px", fontFamily: "Poppins", fontWeight: 300 }}>About</Button>
                   </Link>
 
-                  <Link to='/writing'>
-                  <Button className={`${pathname === "/writing" ? "activeClass" : "noActiveClass"} font-style`} sx={{ color: "#FFFFFF", fontSize: "18px", fontFamily: "Poppins", fontWeight: 300 }}>Writing</Button>
-                  </Link>
+                  
                   {/* <NavLink to='/articles' style={{backgroundColor:"black", color:"white"}}> */}
 
                   {/* <Dropdownn/> */}

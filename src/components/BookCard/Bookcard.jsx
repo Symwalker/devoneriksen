@@ -51,7 +51,7 @@ Maybe they won’t murder each other on the way there.
         <CardMedia
         data-aos="fade-left"
           component="img"
-          sx={{padding: { md:7 , xs:3  }, width: { md: "40%", xs: "70%", sm: "65%" }, height: { md: "40%", xs: "70%", sm: "65%" }}}
+          sx={{padding: { md:7 , xs:3  }, width: { md: "750px", xs: "70%", sm: "65%" }, height: { md: "750px", xs: "70%", sm: "65%" }}}
           image={book1}
           alt="Live from space album cover"
         />
