@@ -1,11 +1,15 @@
 import { Box, Typography } from '@mui/material'
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 
 const Fictionwrting = () => {
+      const location = useLocation()
+      // console.log();
   return (
     <Box sx={{width:"85%", marginTop:"50px", marginX:"auto", color:"white"}}>
-      <Typography variant='h5' className='mb-10' sx={{color:"#ff9b02"}}>Writing</Typography>
+      {
+      location.pathname === "/writing" ? null : <Typography variant='h5' className='mb-10' sx={{color:"#ff9b02"}}>Fiction</Typography>  
+      }
 
       <Box sx={{mt:5, mb:9}}>
             <NavLink to='/writingfiction/cat-invader' className={'font-bold underline hover:text-blue-500 '} style={{fontSize:22, lineHeight:"5px", }}>

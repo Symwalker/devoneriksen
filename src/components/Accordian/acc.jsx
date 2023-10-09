@@ -26,8 +26,8 @@ const Accordion = ({ title, content, expanded, onToggle, date, id }) => {
     <div className={`collapsible ${expanded ? "open" : ""} w-3/4 mx-auto mt-4 `}>
       <div className="toggler" onClick={onToggle} />
 
-      <div data-aos="zoom-out-down" style={{ backgroundColor: "white", height: "auto", marginBottom: "20px", borderBottomLeftRadius:'15px',  borderBottomRightRadius:'15px', }} className="box-shadow">
-        <Box sx={{ bgcolor: "#685ac7", borderBottomLeftRadius: "20px", borderBottomRightRadius: "20px" }} className=" text-white px-4 py-1">
+      <div data-aos="zoom-out-down" style={{ backgroundColor: "white", height: "auto", marginBottom: "20px", borderBottomLeftRadius:'15px',  borderBottomRightRadius:'15px',borderTopLeftRadius:"15px", borderTopRightRadius:"15px"}} className="box-shadow">
+        <Box sx={{ bgcolor: "#685ac7", borderBottomLeftRadius: "20px", borderBottomRightRadius: "20px", borderTopLeftRadius:"5px", borderTopRightRadius:"5px" }} className=" text-white px-4 py-1">
           <Typography sx={{ fontSize: "20px" }}>{title}</Typography>
         </Box>
         <div className="px-4 py-2" style={{ color: "#000", fontSize: "18px" }}>
