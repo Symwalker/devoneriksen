@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchAllArticless } from '../store/products';
 import Loaderr from '../components/Loader/loader';
 import { useLocation } from 'react-router-dom';
+// import FictionAccordion from '../components/fictionAccordions/FictionAccordion';
 
 // import imagePlaceholder from "../images/banner Thea.png"
 
@@ -53,14 +54,10 @@ useEffect(() => {
   localStorage.setItem('accordions', JSON.stringify(accordions));
 }, [accordions]);
 
-    //   console.log(accordions);
-    // const handleAccordionToggle = (index) => { 
-    //     const newAccordions = accordions.map((value, i) => (i === index ? !value : false));
-    //     setAccordions(newAccordions);
-    // };
+   
     return (
         <>
-        {status === "loading" ? <Loaderr/> : <div className='mb-28 mt-20'>
+        {status === "loading" ? <Loaderr/> : <div className='mb-6 mt-20'>
             {articles.map((accordion, index) => {
             const date = accordion.Created_on;
             const datePart = date.split("T");
@@ -80,7 +77,6 @@ useEffect(() => {
         </div>
      
         }
-        
         </>
         
 
