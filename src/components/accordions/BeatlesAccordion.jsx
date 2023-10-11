@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 
 const BeatlesAccordion = () => {
     const initialContent = `
-    Jun 6, 2023<br/><br/>
+    
     
     <NavLink to='/short-stories' className={'underline mt-2 '}>short stories</NavLink><br/><br/>
     
@@ -71,8 +71,8 @@ const BeatlesAccordion = () => {
     
     
         <Box sx={{ width: "75%", marginTop: "20px", marginX: "auto", color: "white" }}>
-          <div data-aos="zoom-out-down" style={{ backgroundColor: "white", height: "auto", marginBottom: "20px", borderBottomLeftRadius: '15px', borderBottomRightRadius: '15px', borderTopLeftRadius: "15px", borderTopRightRadius: "15px" }} className="box-shadow">
-            <Box sx={{ bgcolor: "#685ac7", borderBottomLeftRadius: "20px", borderBottomRightRadius: "20px", borderTopLeftRadius: "5px", borderTopRightRadius: "5px" }} className=" text-white px-4 py-1">
+          <div data-aos="zoom-out-down" data-aos-duration="1500" style={{ backgroundColor: "#d9d5d5", height: "auto", marginBottom: "20px", borderBottomLeftRadius: '15px', borderBottomRightRadius: '15px', borderTopLeftRadius: "15px", borderTopRightRadius: "15px" }} className="box-shadow">
+            <Box sx={{ bgcolor: "#27285C", borderBottomLeftRadius: "20px", borderBottomRightRadius: "20px", borderTopLeftRadius: "5px", borderTopRightRadius: "5px" }} className=" text-white px-4 py-1">
     
               <Typography sx={{ fontSize: "20px" }}>
               I double-dog dare you to turn the Beatles' most nonsensical song into a cohesive story.
@@ -83,12 +83,18 @@ const BeatlesAccordion = () => {
               <div className="px-4 py-2" style={{ color: "#000", fontSize: "18px" }} dangerouslySetInnerHTML={{ __html: content }} />
               <span
                 className='px-4 '
-                style={{ color: "blue", textDecoration: "underline", cursor: "pointer" }}
+                style={{ color: "blue", textDecoration: "underline", cursor: "pointer",fontSize:"18px" }}
                 onClick={toggleExpanded}
               >
                 {expanded ? 'See less' : 'Read more'}
               </span>
             </div>
+            <div className="flex justify-between px-4 py-2 items-center">
+        <Typography fontFamily={"Domine, serif"} color={"#ff9b02"} className="">2023-07-06
+
+</Typography>
+
+        </div>
           </div>
     
         </Box>

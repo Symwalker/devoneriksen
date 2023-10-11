@@ -26,8 +26,8 @@ const Accordion = ({ title, content, expanded, onToggle, date, id }) => {
     <div className={`collapsible ${expanded ? "open" : ""} w-3/4 mx-auto mt-4 `}>
       <div className="toggler" onClick={onToggle} />
 
-      <div data-aos="zoom-out-down" style={{ backgroundColor: "white", height: "auto", marginBottom: "20px", borderBottomLeftRadius:'15px',  borderBottomRightRadius:'15px',borderTopLeftRadius:"15px", borderTopRightRadius:"15px"}} className="box-shadow">
-        <Box sx={{ bgcolor: "#685ac7", borderBottomLeftRadius: "20px", borderBottomRightRadius: "20px", borderTopLeftRadius:"5px", borderTopRightRadius:"5px" }} className=" text-white px-4 py-1">
+      <div data-aos="zoom-out-down" data-aos-duration="1500" style={{ backgroundColor: "#d9d5d5", height: "auto", marginBottom: "20px", borderBottomLeftRadius:'15px',  borderBottomRightRadius:'15px',borderTopLeftRadius:"15px", borderTopRightRadius:"15px"}} className="box-shadow">
+        <Box sx={{ bgcolor: "#27285C", borderBottomLeftRadius: "20px", borderBottomRightRadius: "20px", borderTopLeftRadius:"5px", borderTopRightRadius:"5px" }} className=" text-white px-4 py-1">
           <Typography sx={{ fontSize: "20px" }}>{title}</Typography>
         </Box>
         <div className="px-4 py-2" style={{ color: "#000", fontSize: "18px" }}>
@@ -35,7 +35,7 @@ const Accordion = ({ title, content, expanded, onToggle, date, id }) => {
           {!expanded && (
             <div>
               <p>
-                {content.substring(0, 200)}{" "}
+                {content.substring(0, 200)}{" "}<br/>
                 <span style={{ color: "blue", textDecoration: "underline", cursor: "pointer" }} onClick={onToggle}>
                   Read more
                 </span>
@@ -55,7 +55,7 @@ const Accordion = ({ title, content, expanded, onToggle, date, id }) => {
           )}
         </div>
         <div className="flex justify-between px-4 py-2 items-center">
-          <Typography fontFamily={"Domine, serif"} className="">{date}</Typography>
+          <Typography color={"#ff9b02"} fontFamily={"Domine, serif"} className="">{date}</Typography>
           {
             location.pathname === "/admin-setup/addwritingarticles" && localStorage.getItem("token") ? <Button onClick={() => handleDelete(id)} sx={{
               bgcolor: "red",
